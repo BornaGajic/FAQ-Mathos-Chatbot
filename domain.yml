@@ -1,0 +1,37 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - faq
+  - tell_more_about_programme
+
+entities:
+  - degree
+  - programme
+
+actions:
+  - action_more_info_programme
+
+responses:
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_greet:
+  - text: "Hey!"
+  - text: "Hello!"
+  - text: "Yo!"
+  - text: "Hi!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60  # value in minutes
+  carry_over_slots_to_new_session: true

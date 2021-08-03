@@ -1,0 +1,9 @@
+version: "2.0"
+
+stories:
+  - story: More info on some study programme
+    steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: tell_more_about_programme
+    - action: action_more_info_programme

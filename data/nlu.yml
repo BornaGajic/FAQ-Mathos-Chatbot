@@ -1,0 +1,114 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+  
+- intent: faq/ask_study_programmes
+  examples: |
+    - What study programs are you offering?
+    - Tell me what study programmes are you offering
+    - What are the names of study programmes?
+    - Study programs
+    - Study programmes
+    - What can I learn here?
+    - Programs
+    - Programmes
+
+- intent: faq/ask_undergrad_programmes
+  examples: |
+    - What are your undergraduate programmes?
+    - What are your Bachelor level programmes?
+    - Tell me all the Bachelor level programs
+    - Tell me all the undergraduate programs
+    - Bachelor level programmes
+    - Undergraduate programmes
+
+- intent: faq/ask_grad_programmes
+  examples: |
+    - What are your graduate programmes?
+    - What are your Master level programmes?
+    - Tell me all the Master level programs
+    - Tell me all the graduate programs
+    - Master level programmes
+    - Graduate programmes
+
+- intent: tell_more_about_programme
+  examples: |
+    - Tell me more about [undergraduate]{"entity" : "degree"} [Mathematics]{"entity" : "programme"} program
+    - Tell me more info on [graduate]{"entity" : "degree"} [Computer Science]{"entity" : "programme"} programme
+    - Information about [Mathematics and Computer Science]{"entity" : "programme"} on [Bachelor level]{"entity" : "degree"}
+    - [Financial Mathematics & Statistics]{"entity" : "programme"}, [Bachelor]{"entity" : "degree"} level
+    - What is the [graduate]{"entity" : "degree"} [Mathematics & Computer Science]{"entity" : "programme"}?
+    - Give me more info on [Graduate]{"entity" : "degree"} [Financial Mathematics and Statistics]{"entity" : "programme"}
+    - Tell me more about [Mathematics]{"entity" : "programme"}, the one on [Graduate]{"entity" : "degree"} degree
+    - Say more about [Mathematics and Computer Science]{"entity" : "programme"}, [Master]{"entity" : "degree"} level
+
+- lookup: degree
+  examples: |
+    - Undergraduate
+    - Graduate
+    - Bachelor
+    - Master
+    - Master level
+    - Bachelor level
+  
+- lookup: programme
+  examples: |
+    - Mathematics
+    - Mathematics & Computer Science
+    - Mathematics and Computer Science
+    - Financial Mathematics & Statistics
+    - Financial Mathematics and Statistics
