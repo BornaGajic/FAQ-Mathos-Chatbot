@@ -66,6 +66,7 @@ nlu:
     - What can I learn here?
     - Programs
     - Programmes
+    - do you know what study programs our college has?
 
 - intent: faq/ask_undergrad_programmes
   examples: |
@@ -99,15 +100,15 @@ nlu:
     - Info on [Master level]{"entity": "degree", "value": "graduate"} [Financial Mathematics & Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
     - What can you tell me about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [Maths]{"entity": "programme", "value": "mathematics"} study program?
     - Tell me about [master level]{"entity": "degree", "value": "graduate"} [Financial Mathematics & Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} program
-    - Tell me more info on [bachelor]{"entity": "degree", "value": "graduate"} [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} programme
-    - Information about [Master level]{"entity": "degree", "value": "graduate"} [maths]{"entity": "programme", "value": "mathematics"}
+    - Tell me more info on [bachelor]{"entity": "degree", "value": "undergraduate"} [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} programme
+    - Information about [Master level]{"entity": "degree", "value": "graduate"} [financial maths and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
     - [undergraduate]{"entity" : "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
     - What is the [master level]{"entity": "degree", "value": "graduate"} [Mathematics & Computer Science]{"entity" : "programme", "value": "mathematics&computer_science"}?
     - Give me more info on [Graduate]{"entity": "degree", "value": "graduate"} [Mathematics]{"entity": "programme", "value": "mathematics"}
     - [Master level]{"entity" : "degree", "value": "graduate"} [Mathematics]{"entity": "programme", "value": "mathematics"}, please give me more info on that
     - Say more about [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"}, [Master level]{"entity": "degree", "value": "graduate"}
     - Say more about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics & computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program
-    - Info on [undergraduate]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
+    - Info on [bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
     - What can you tell me about [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program?
 
 - intent: request_courses
@@ -119,6 +120,33 @@ nlu:
     - [mathematics and computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program for [undergraduate]{"entity": "degree", "value": "undergraduate"} students
     - list of courses for [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
     - give me course list for the [undergraduate]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"} program
+    - [Mathematics & computer science]{"entity": "progamme", "value": "mathematics&computer_science"} on an [undergraduate]{"entity": "degree", "value": "undergraduate"} degree course list
+    - Courses of [Financial Mathematics & statistics]{"entity": "progamme", "value": "financial_mathematics&statistics"}
+    - [Mathematics]{"entity": "progamme", "value": "mathematics"} courses
+    - hey robot, give me a list of all the courses for the [computer science program]{"entity": "programme", "value": "mathematics&computer_science"}
+    - list [financial mathematics and statistics]{"entity": "programme"} courses
+
+- intent: request_course_information
+  examples: |
+    - Give me information on a course with an id of [M123]{"entity": "course_id"}
+    - Tell me more info about [Real Analysis]{"entity": "course_name"}
+    - Tell me about [Object - Oriented Programming]{"entity": "course_name"}
+    - What's the behind [Integral Calculus]{"entity": "course_name"}
+    - Can you tell me more about [Master Thesis]{"entity": "course_name"}
+    - What will I learn after the course with an id of [M087]{"entity": "course_id"}
+    - [Ordinary Differential Equations]{"entity": "course_name"}
+    - [Data Structures and Algorithms I]{"entity": "course_name"}
+    - [M101]{"entity": "course_id"}
+    - [Z007]{"entity": "course_id"}
+    - [I056]{"entity": "course_id"}
+    - Information on a course with an id of [I058]{"entity": "course_id"}
+    - Information on a course with a name of [Numerical Mathematics]{"entity": "course_name"}
+    - can you give me more information about [Linear Algebra I]{"entity": "course_name"} please
+    - Hey my friend, could you give me some info regarding the [Probability]{"entity": "course_name"} course?
+    - robot give me stuff about [Modern Database Systems]{"entity": "course_name"}
+    - please give me some info on the [Statistics]{"entity": "course_name"}, with the id of [M120]{"entity": "course_id"}
+    - [M098]{"entity": "course_id"} [Introduction to Probability and Statistics]{"entity": "course_name"}
+
 - lookup: degree
   examples: |
     - Undergraduate
@@ -136,3 +164,201 @@ nlu:
     - Mathematics and Computer Science
     - Financial Mathematics & Statistics
     - Financial Mathematics and Statistics
+
+- lookup: course_name
+  examples: |
+    - Differential Calculus
+    - Integral Calculus
+    - Linear Algebra II
+    - Elementary Geometry
+    - Elementary Mathematics
+    - Combinatorial and Discrete Mathematics
+    - Linear Algebra I
+    - English/German for Mathematics and Computer Science Students I
+    - English class
+    - German class
+    - Foreign language class
+    - English/German for Mathematics and Computer Science Students II
+    - Physical Education I
+    - Multivariable Calculus
+    - Complex Analysis
+    - Numerical Mathematics
+    - Statistical Practice
+    - Number Theory
+    - Introduction to Probability and Statistics
+    - Mathematical Tools
+    - Physical Education II
+    - Real Analysis
+    - Algebra
+    - Ordinary Differential Equations
+    - Functional Programming
+    - Mathematical Logic in Computer Science
+    - Object Oriented Programming
+    - Introduction to Computer Science
+    - Modern Database Systems
+    - Applied Math for Computer Science
+    - Data Structures and Algorithms I
+    - Data Structures and Algorithms II
+    - Modern Computer System
+    - Theoretical Foundations of Computer Science
+    - Full Stack Web Development
+    - Final Project
+    - Ordinary Differential Equations
+    - Final Paper
+    - Software Engineering
+    - Numerical Mathematics
+    - Probability
+    - Statistics
+    - Stochastic Processes I
+    - Stochastic Processes II
+    - Financial and Actuarial Mathematics
+    - Macroeconomics I
+    - Macroeconomics II
+    - Master Thesis
+    - Multivariate analysis
+    - Time Series
+    - Mathematical Finance
+    - Business Analysis
+    - Credit Risk Management
+    - Applied linear algebra and scientific computing
+    - Intelligent Robotic Systems
+    - Semantics of programming languages
+    - Linear optimization
+    - Operating systems
+    - Advanced programming techniques
+    - Nonlinear optimization
+
+- lookup: course_id
+  examples: |
+    - M084
+    - M085
+    - M087
+    - M101
+    - M100
+    - M102
+    - M086
+    - Z011
+    - Z012
+    - Z014
+    - M009
+    - M015
+    - M089
+    - M095
+    - M108
+    - M098
+    - I027
+    - M085
+    - M087
+    - M101
+    - M100
+    - M102
+    - M086
+    - Z011
+    - Z012
+    - Z014
+    - M009
+    - M015
+    - M089
+    - M095
+    - M108
+    - M098
+    - I027
+    - Z015
+    - M094
+    - M083
+    - M090
+    - Z007
+    - M084
+    - M085
+    - M087
+    - I044
+    - M088
+    - I048
+    - M086
+    - I056
+    - Z011
+    - Z012
+    - Z014
+    - I046
+    - M091
+    - I053
+    - I054
+    - I045 
+    - M097 
+    - Z015 
+    - I057 
+    - I058 
+    - M090 
+    - Z007 
+    - I052 
+    - M089 
+    - M118 
+    - M120 
+    - M119 
+    - M121 
+    - M008 
+    - E012 
+    - E013 
+    - MIP001
+    - M122 
+    - M003 
+    - M123 
+    - E001 
+    - E009 
+    - MI009 
+    - M118 
+    - I066 
+    - MI008 
+    - M128 
+    - I067 
+    - I068 
+    - M129 
+    - Z015 
+    - M094 
+    - M083 
+    - M090 
+    - Z007 
+    - M084 
+    - M085 
+    - M087 
+    - I044 
+    - M088 
+    - I048 
+    - M086 
+    - I056 
+    - Z011 
+    - Z012 
+    - Z014 
+    - I046 
+    - M091 
+    - I053 
+    - I054 
+    - I045 
+    - M097 
+    - Z015 
+    - I057 
+    - I058 
+    - M090 
+    - Z007 
+    - I052 
+    - M089 
+    - M118 
+    - M120 
+    - M119 
+    - M121 
+    - M008 
+    - E012 
+    - E013 
+    - M122 
+    - M003 
+    - M123 
+    - E001 
+    - E009     
+    - MI009 
+    - M118 
+    - I066 
+    - MI008 
+    - M128 
+    - I067 
+    - I068 
+    - M129 

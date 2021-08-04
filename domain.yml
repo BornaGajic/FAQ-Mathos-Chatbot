@@ -9,14 +9,18 @@ intents:
   - faq
   - tell_more_about_programme
   - request_courses
+  - request_course_information
 
 entities:
   - degree
   - programme
+  - course_name
+  - course_id
 
 actions:
   - action_more_info_programme
   - action_course_list
+  - action_course_info
 
 responses:
   utter_did_that_help:
@@ -29,10 +33,14 @@ responses:
   - text: "Hi!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "Bye!"
+  - text: "See you later!"
+  - text: "Bye, bye!"
+  - text: "Goodbye :)"
+  - text: "Until next time! :D"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "I'm your robot colleague x)"
 
 session_config:
   session_expiration_time: 60  # value in minutes
