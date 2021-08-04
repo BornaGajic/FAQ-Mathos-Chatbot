@@ -1,0 +1,108 @@
+{
+    "undergraduate": 
+    {
+        "mathematics":
+        {
+            "year#1": {
+                "M084": "Differential Calculus",
+                "M085": "Integral Calculus",
+                "M087": "Linear Algebra II",
+                "M101": "Elementary Geometry",
+                "M100": "Elementary Mathematics",
+                "M102": "Combinatorial and Discrete Mathematics",
+                "M086": "Linear Algebra I",
+                "Z011": "English/German for Mathematics and Computer Science Students I",
+                "Z012": "English/German for Mathematics and Computer Science Students II",
+                "Z014": "Physical Education I"
+            },  
+            "year#2": {
+                "M009": "Multivariable Calculus",
+                "M015": "Complex Analysis",
+                "M089": "Numerical Mathematics",
+                "M095": "Statistical Practice",
+                "M108": "Number Theory",
+                "M098": "Introduction to Probability and Statistics",
+                "I027": "Mathematical Tools",
+                "Z015": "Physical Education II"
+            },
+            "year#3": {
+                "M094": "Real Analysis",
+                "M083": "Algebra",
+                "M090": "Ordinary Differential Equations",
+                "Z007": "Final Paper"
+            }
+        },
+        "mathematics&computer_science":
+        {
+            "year#1": {
+                "M084": "Differential Calculus",
+                "M085": "Integral Calculus",
+                "M087": "Linear Algebra II",
+                "I044": "Functional Programming",
+                "M088": "Mathematical Logic in Computer Science",
+                "I048": "Object - Oriented Programming",
+                "M086": "Linear Algebra I",
+                "I056": "Introduction to Computer Science", 
+                "Z011": "English/German for Mathematics and Computer Science Students I",
+                "Z012": "English/German for Mathematics and Computer Science Students II",
+                "Z014": "Physical Education I"
+            },  
+            "year#2": {
+                "I046": "Modern Database Systems",
+                "M091": "Applied Math for Computer Science",
+                "I053": "Data Structures and Algorithms I",
+                "I054": "Data Structures and Algorithms II",
+                "I045": "Modern Computer System",
+                "M097": "Theoretical Foundations of Computer Science",
+                "Z015": "Physical Education II"
+            },
+            "year#3": {
+                "I057": "Full Stack Web Development",
+                "I058": "Final Project",
+                "M090": "Ordinary Differential Equations",
+                "Z007": "Final Paper",
+                "I052": "Software Engineering",
+                "M089": "Numerical Mathematics"
+            }
+        }
+    },
+    "graduate":
+    {
+       "financial_mathematics&statistics": 
+       {
+           "year#1": {
+               "M118": "Probability",
+               "M120": "Statistics",
+               "M119": "Stochastic Processes I",
+               "M121": "Stochastic Processes II",
+               "M008": "Financial and Actuarial Mathematics",
+               "E012": "Macroeconomics I",
+               "E013": "Macroeconomics II"
+           },
+           "year#2": {
+                "MIP001": "Master Thesis",
+                "M122": "Multivariate analysis",
+                "M003": "Time Series",
+                "M123": "Mathematical Finance",
+                "E001": "Business Analysis",
+                "E009": "Credit Risk Management"
+           }
+       },
+       "mathematics&computer_science":
+       {
+           "year#1": {
+               "MI009": "Applied linear algebra and scientific computing",
+               "M118": 	"Probability",
+               "I066": "Intelligent Robotic Systems",
+               "MI008": "Semantics of programming languages"
+           },
+           "year#2": {
+                "MIP001": "Master Thesis",
+                "M128": "Linear optimization",
+                "I067": "Operating systems",
+                "I068": "Advanced programming techniques",
+                "M129": "Nonlinear optimization"
+           }
+       }
+    }
+}

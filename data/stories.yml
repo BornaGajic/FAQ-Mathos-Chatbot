@@ -7,3 +7,8 @@ stories:
     - action: utter_greet
     - intent: tell_more_about_programme
     - action: action_more_info_programme
+
+  - story: Print course list for some study programme
+    steps:
+    - intent: request_courses
+    - action: action_course_list

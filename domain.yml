@@ -8,6 +8,7 @@ intents:
   - bot_challenge
   - faq
   - tell_more_about_programme
+  - request_courses
 
 entities:
   - degree
@@ -15,6 +16,7 @@ entities:
 
 actions:
   - action_more_info_programme
+  - action_course_list
 
 responses:
   utter_did_that_help:

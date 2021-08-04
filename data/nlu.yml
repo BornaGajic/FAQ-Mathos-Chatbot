@@ -87,15 +87,38 @@ nlu:
 
 - intent: tell_more_about_programme
   examples: |
-    - Tell me more about [undergraduate]{"entity" : "degree"} [Mathematics]{"entity" : "programme"} program
-    - Tell me more info on [graduate]{"entity" : "degree"} [Computer Science]{"entity" : "programme"} programme
-    - Information about [Mathematics and Computer Science]{"entity" : "programme"} on [Bachelor level]{"entity" : "degree"}
-    - [Financial Mathematics & Statistics]{"entity" : "programme"}, [Bachelor]{"entity" : "degree"} level
-    - What is the [graduate]{"entity" : "degree"} [Mathematics & Computer Science]{"entity" : "programme"}?
-    - Give me more info on [Graduate]{"entity" : "degree"} [Financial Mathematics and Statistics]{"entity" : "programme"}
-    - Tell me more about [Mathematics]{"entity" : "programme"}, the one on [Graduate]{"entity" : "degree"} degree
-    - Say more about [Mathematics and Computer Science]{"entity" : "programme"}, [Master]{"entity" : "degree"} level
+    - Tell me more about [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics]{"entity": "programme", "value": "mathematics"} program
+    - Tell me more info on [graduate]{"entity": "degree", "value": "graduate"} [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} programme
+    - Information about [Mathematics and Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} on [Bachelor level]{"entity": "degree", "value": "undergraduate"}
+    - [Financial Mathematics & Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}, [Bachelor level]{"entity" : "degree", "value": "undergraduate"}
+    - What is the [graduate]{"entity": "degree", "value": "graduate"} [Mathematics & Computer Science]{"entity" : "programme", "value": "mathematics&computer_science"}?
+    - Give me more info on [Graduate]{"entity": "degree", "value": "graduate"} [Financial Mathematics and Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
+    - Tell me more about [Mathematics]{"entity": "programme", "value": "mathematics"}, the one on [Graduate]{"entity" : "degree", "value": "graduate"} degree
+    - Say more about [Financial Mathematics and Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}, [Master level]{"entity": "degree", "value": "graduate"}
+    - Say more about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [math]{"entity": "programme", "value": "mathematics"} study program
+    - Info on [Master level]{"entity": "degree", "value": "graduate"} [Financial Mathematics & Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
+    - What can you tell me about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [Maths]{"entity": "programme", "value": "mathematics"} study program?
+    - Tell me about [master level]{"entity": "degree", "value": "graduate"} [Financial Mathematics & Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} program
+    - Tell me more info on [bachelor]{"entity": "degree", "value": "graduate"} [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} programme
+    - Information about [Master level]{"entity": "degree", "value": "graduate"} [maths]{"entity": "programme", "value": "mathematics"}
+    - [undergraduate]{"entity" : "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
+    - What is the [master level]{"entity": "degree", "value": "graduate"} [Mathematics & Computer Science]{"entity" : "programme", "value": "mathematics&computer_science"}?
+    - Give me more info on [Graduate]{"entity": "degree", "value": "graduate"} [Mathematics]{"entity": "programme", "value": "mathematics"}
+    - [Master level]{"entity" : "degree", "value": "graduate"} [Mathematics]{"entity": "programme", "value": "mathematics"}, please give me more info on that
+    - Say more about [Computer Science]{"entity": "programme", "value": "mathematics&computer_science"}, [Master level]{"entity": "degree", "value": "graduate"}
+    - Say more about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics & computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program
+    - Info on [undergraduate]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
+    - What can you tell me about [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program?
 
+- intent: request_courses
+  examples: |
+    - Give me courses of the [bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics & computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program
+    - What courses does [master level]{"entity": "degree", "value": "graduate"} [mathematics]{"entity": "programme", "value": "mathematics"} implement
+    - Course list, [financial mathematics & statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}, [graduate]{"entity": "degree", "value": "graduate"} degree
+    - [math]{"entity": "programme", "value": "mathematics"} study program for [undergraduate]{"entity": "degree", "value": "undergraduate"} students
+    - [mathematics and computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program for [undergraduate]{"entity": "degree", "value": "undergraduate"} students
+    - list of courses for [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"}
+    - give me course list for the [undergraduate]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"} program
 - lookup: degree
   examples: |
     - Undergraduate
@@ -108,6 +131,7 @@ nlu:
 - lookup: programme
   examples: |
     - Mathematics
+    - Math
     - Mathematics & Computer Science
     - Mathematics and Computer Science
     - Financial Mathematics & Statistics
