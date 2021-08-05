@@ -1,6 +1,18 @@
 version: "2.0"
 
 responses:
+  utter_chitchat/random:
+    - text: 😀
+    - text: 😄
+    - text: 😁
+    - text: 😅
+    - text: 🙂
+    - text: 😎
+    - text: 🤖
+    - text: 🚀 
+    - text: 👾
+    - text: 💯
+
   utter_faq/ask_study_programmes:
     - text:  "We have two undergraduate (Bachelor level) and two graduate (Master level) university programmes. 
     Former are Mathematics and Mathematics & Computer Science, and latter are Financial Mathematics & Statistics and Mathematics & Computer Science"

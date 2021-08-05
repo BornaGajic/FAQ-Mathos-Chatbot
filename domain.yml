@@ -7,6 +7,7 @@ intents:
   - deny
   - bot_challenge
   - faq
+  - chitchat
   - tell_more_about_programme
   - request_courses
   - request_course_information

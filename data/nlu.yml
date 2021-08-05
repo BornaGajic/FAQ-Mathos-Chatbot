@@ -55,6 +55,33 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: chitchat/random
+  examples:
+    - Cool
+    - Nice
+    - Wohoo
+    - Niceee
+    - You cool?
+    - Okay
+    - Ayee
+    - Alright
+    - OK
+    - Okay
+    - Mhm
+    - Aha
+    - Kewl
+    - Splendid
+    - Awww man
+    - Aww
+    - Oh
+    - Ohhhhh
+    - Great
+    - Greaaat!
+    - Sure
+    - Mhmmm
+    - Oof
+
   
 - intent: faq/ask_study_programmes
   examples: |
@@ -151,6 +178,7 @@ nlu:
     - hey robot, give me a list of all the courses for the [computer science program]{"entity": "programme", "value": "mathematics&computer_science"}
     - list [financial mathematics and statistics]{"entity": "programme"} courses
     - hey, list me [mathematics]{"entity": "programme"} courses
+    - give me a list of courses from the [financial mathematics and statistics]{"entity": "programme"} program
 
 - intent: request_course_information
   examples: |

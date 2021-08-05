@@ -15,3 +15,8 @@ rules:
   steps:
   - intent: faq
   - action: utter_faq
+
+- rule: Response with a emoji every time user chitchats
+  steps:
+  - intent: chitchat
+  - action: utter_chitchat
