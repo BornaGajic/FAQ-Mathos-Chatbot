@@ -86,6 +86,31 @@ nlu:
     - Master level programmes
     - Graduate programmes
 
+- intent: faq/ask_dpt_location
+  examples: |
+    - Department location
+    - Dpt location
+    - What's the location of our college?
+    - What's the adress of our department?
+    - Give me the adress of our department
+    - Give me the adress of our college
+    - College adress
+    - Department adress
+    - Location of the department
+    - Where is this college
+    - Where do I have my lectures?
+  
+- intent: faq/ask_student_admin_office
+  examples: |
+    - What are the working hours of the student administration office?
+    - Student Administration Office
+    - Is student administration office working now?
+    - Is student administration office open?
+    - student administration office, basic information
+    - information on student administration office
+    - tell me working hours of the student administration office
+    - hey, is student administration working?
+
 - intent: tell_more_about_programme
   examples: |
     - Tell me more about [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics]{"entity": "programme", "value": "mathematics"} program
@@ -125,6 +150,7 @@ nlu:
     - [Mathematics]{"entity": "progamme", "value": "mathematics"} courses
     - hey robot, give me a list of all the courses for the [computer science program]{"entity": "programme", "value": "mathematics&computer_science"}
     - list [financial mathematics and statistics]{"entity": "programme"} courses
+    - hey, list me [mathematics]{"entity": "programme"} courses
 
 - intent: request_course_information
   examples: |
@@ -146,6 +172,52 @@ nlu:
     - robot give me stuff about [Modern Database Systems]{"entity": "course_name"}
     - please give me some info on the [Statistics]{"entity": "course_name"}, with the id of [M120]{"entity": "course_id"}
     - [M098]{"entity": "course_id"} [Introduction to Probability and Statistics]{"entity": "course_name"}
+    - [Elementary Geometry]{"entity": "course_name"} info
+    - [Elementary Mathematics]{"entity": "course_name"} course info
+    - Say more about [Software Engineering]{"entity": "course_name"}
+    - Do you know what's the name of the course with an id of [M083]{"entity": "course_id"}?
+    - [Z011]{"entity": "course_id"} info
+    - [MI008]{"entity": "course_id"} course info
+
+- intent: request_staff_email
+  examples: |
+    - Tell me the email adress of professor [Mirta Bensic]{"entity": "staff", "value": "mirta_bensic"}
+    - Email adress of professor [Kresimir Burazin]{"entity": "staff", "value": "kresimir_burazin"}
+    - Please tell me email of [Danijel Grahovac]{"entity": "staff", "value": "danijel_grahovac"}
+    - Email of professor [Dragana Janakov Masirevic]{"entity": "staff", "value": "dragana_jankov_masirevic"}
+    - Give me an email adress of [Slobodan Jelic]{"entity": "staff", "value": "slobodan_jelic"}
+    - Email adress [Dragan Jukic]{"entity": "staff", "value": "dragan_jukic"}
+    - Professors [Mirela Jukic Bokun]{"entity": "staff", "value": "mirela_jukic_bokun"} email adress
+    - [Ljerka Jukic Matic]{"entity": "staff", "value": "ljerka_jukic_matic"} contact info
+    - [Zdenka Kolar]{"entity": "staff", "value": "zdenka_kolar"} email adress
+    - [Ivana Kuzmanovic Ivicic]{"entity": "staff", "value": "ivana_kuzmanovic_ivicic"} email
+    - Tell me the email adress of professor [Snjezana Majstorovic]{"entity": "staff", "value": "snjezana_majstorovic"}
+    - Email adress of professor [Darija Markovic]{"entity": "staff", "value": "darija_markovic"}
+    - Please tell me email of [Tomislav Marosevic]{"entity": "staff", "value": "tomislav_marosevic"}
+    - Email of professor [Ivan Matic]{"entity": "staff", "value": "ivan_matic"}
+    - Give me an email adress of [Domagoj Matijevic]{"entity": "staff", "value": "domagoj_matijevic"}
+    - Email adress [Marija Miloloza Pandur]{"entity": "staff", "value": "marija_miloloza_pandur"}
+    - Professors [Suzana Miodragovic]{"entity": "staff", "value": "suzana_miodragovic"} email adress
+    - [Ivan Papic]{"entity": "staff", "value": "ivan_papic"} contact info
+    - [Ljiljana Primorac Gajcic]{"entity": "staff", "value": "ljiljana_primorac_gajcic"} email adress
+    - [Mihaela Ribicic Penava]{"entity": "staff", "value": "mihaela_ribicic_penava"} email
+    - Contact info of [Kristian Sabo]{"entity": "staff", "value": "kristian_sabo"}
+    - Contact info of professor [Rudolf Scitovski]{"entity": "staff", "value": "rudolf_scitovski"}
+    - [Domagoj Severdija]{"entity": "staff", "value": "domagoj_severdija"} email
+    - Tell me the email adress of professor [Ivan Soldo]{"entity": "staff", "value": "ivan_soldo"}
+    - Email adress of professor [Nenad Suvak]{"entity": "staff", "value": "nenad_suvak"}
+    - Please tell me email of [Zoran Tomljanovic]{"entity": "staff", "value": "zoran_tomljanovic"}
+    - Email of professor [Ninoslav Truhar]{"entity": "staff", "value": "ninoslav_truhar"}
+    - Professors [Luka Borozan]{"entity": "staff", "value": "luka_borozan"} mail
+    - Hey, give me email adress of [Darija Brajkovic Zoric]{"entity": "staff", "value": "darija_brajkovic_zoric"}
+    - Yo robot, give me email of [Rebeka Coric]{"entity": "staff", "value": "rebeka_coric"}
+    - What's the email adress of professor [Mateja Djumic]{"entity": "staff", "value": "mateja_djumic"}?
+    - What's the email adress of professor [Danijela Jaganjac Babic]{"entity": "staff", "value": "danijela_jaganjac_babic"}?
+    - What's the email adress of [Jelena Jankov]{"entity": "staff", "value": "jelena_jankov"}?
+    - What's the email adress of [Jurica Maltar]{"entity": "staff", "value": "jurica_maltar"}?
+    - Do you know what's the email adress of [Marinela Pilj Vidakovic]{"entity": "staff", "value": "marinela_pilj_vidakovic"}?
+    - Do you know what's the email adress of [Petar Taler]{"entity": "staff", "value": "petar_taler"}?
+    - Do you know what's the email adress of professor [Matea Ugrica]{"entity": "staff", "value": "matea_ugrica"}?
 
 - lookup: degree
   examples: |
@@ -362,3 +434,44 @@ nlu:
     - I067 
     - I068 
     - M129 
+
+- lookup: staff
+  examples: |
+    - mirta bensic
+    - krešimir burazin
+    - danijel grahovac
+    - dragana jankov masirevic
+    - slobodan jelic
+    - dragan jukic
+    - mirela jukic bokun
+    - ljerka jukic matic
+    - zdenka kolar
+    - ivana kuzmanovic ivicic
+    - snjezana majstorovic
+    - darija markovic
+    - tomislav marosevic
+    - ivan matic
+    - domagoj matijevic
+    - marija miloloza pandur
+    - suzana miodragovic
+    - ivan papic
+    - ljiljana primorac gajcic
+    - mihaela ribicic penava
+    - kristian sabo
+    - rudolf scitovski
+    - domagoj severdija
+    - ivan soldo
+    - nenad suvak
+    - zoran tomljanovic
+    - ninoslav truhar
+    - luka borozan
+    - darija brajkovic zoric
+    - rebeka coric
+    - ivana crnjac
+    - mateja djumic
+    - danijela jaganjac babic
+    - jelena jankov
+    - jurica maltar
+    - marinela pilj vidakovic
+    - petar taler
+    - matea ugrica

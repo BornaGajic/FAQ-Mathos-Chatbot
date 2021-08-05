@@ -10,4 +10,9 @@ responses:
 
   utter_faq/ask_grad_programmes:
     - text: "We have two graduate (Master level) study programmes: Financial Mathematics & Statistics and Mathematics & Computer Science"
+  
+  utter_faq/ask_dpt_location:
+    - text: "Adress of our department is: Trg Ljudevita Gaja 6, 31000, Osijek"
         
+  utter_faq/ask_student_admin_office:
+    - text: "Student Administration Office is working on every working day from 7:30 AM until 2:30 PM (for students)"

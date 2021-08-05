@@ -33,6 +33,7 @@ class ActionMoreInfoProgramme(Action):
                 programme = e['value']
             elif e['entity'] == 'degree':
                 degree = e['value']
+
         print("more info action")
         print(f"program {programme}, degree {degree}")
 
@@ -40,13 +41,19 @@ class ActionMoreInfoProgramme(Action):
             data = json.load(json_file)
 
             try:
-                for (key, info) in data[degree][programme].items():        
-                    dispatcher.utter_message(text=f"{info}\n")
-            except:
-                if len(programme) > 0 or len(degree) > 0:
-                    dispatcher.utter_message(text="Sorry, I don't understand your request. Please specify degree and programme that you are interested in.")
+                if not programme:
+                    dispatcher.utter_message(text="Please specify programme.")
+                elif programme and not degree:
+
+                    for (_degree, _programmes) in data.items():
+                        if programme in _programmes:
+                            for (key, info) in data[_degree][programme].items():        
+                                dispatcher.utter_message(text=f"{info}\n\n")
                 else:
-                    dispatcher.utter_message(text="Sorry, I don't understand your request.")
+                    for (key, info) in data[degree][programme].items():        
+                        dispatcher.utter_message(text=f"{info}\n\n")
+            except:
+                dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
         return []
 
@@ -131,3 +138,32 @@ class ActionCourseInfo(Action):
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
         return []
+
+class ActionStaffEmail(Action):
+
+    def name(self) -> Text:
+        return "action_staff_email"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        staff = ""
+
+        for e in tracker.latest_message['entities']:
+            if e['entity'] == 'staff':
+                staff = e['value']
+        
+        print("course info")
+        print(f"staff {staff}")
+
+        with open('./knowledge_base_data/staff_email.json') as json_file:
+            data = json.load(json_file)
+
+            try:
+                dispatcher.utter_message(text=data[staff])
+            except:
+                dispatcher.utter_message(text="Sorry, I don't understand your request.")
+
+        return []
+
