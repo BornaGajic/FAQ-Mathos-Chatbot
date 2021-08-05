@@ -156,7 +156,7 @@ nlu:
   examples: |
     - Give me information on a course with an id of [M123]{"entity": "course_id"}
     - Tell me more info about [Real Analysis]{"entity": "course_name"}
-    - Tell me about [Object - Oriented Programming]{"entity": "course_name"}
+    - Tell me about [Object Oriented Programming]{"entity": "course_name"}
     - What's the behind [Integral Calculus]{"entity": "course_name"}
     - Can you tell me more about [Master Thesis]{"entity": "course_name"}
     - What will I learn after the course with an id of [M087]{"entity": "course_id"}
@@ -178,6 +178,9 @@ nlu:
     - Do you know what's the name of the course with an id of [M083]{"entity": "course_id"}?
     - [Z011]{"entity": "course_id"} info
     - [MI008]{"entity": "course_id"} course info
+    - [Functional Programming]{"entity": "course_name"} information
+    - [Semantics of programming languages]{"entity": "course_name"} information
+    - [Multivariable Calculus]{"entity": "course_name"} information
 
 - intent: request_staff_email
   examples: |

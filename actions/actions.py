@@ -81,18 +81,20 @@ class ActionCourseList(Action):
             data = json.load(json_file)
 
             try:
-                if programme == "":
+                if not programme:
                     dispatcher.utter_message(text="Please specify a programme that you are interested in.")
-                elif degree == "":
+                elif not degree:
                     for (degrees, content) in data.items():
                         
                         if programme in content:
-                            for (key, courses) in content.items():
-                                k = key.replace('#', ' ')
+                            for (year, courses) in content[programme].items():
+                                k = year.replace('#', ' ')
                                 dispatcher.utter_message(text=f"{k}\n")
-
+                                                                
                                 for (id, name) in courses.items():
                                     dispatcher.utter_message(text=f"{id}, {name}\n")
+
+                                dispatcher.utter_message(text="\n")
                             break
                 else:
                     for (key, courses) in data[degree][programme].items():

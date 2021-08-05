@@ -15,3 +15,8 @@ stories:
     steps:
     - intent: request_course_information
     - action: action_course_info 
+
+  - story: Request staff email
+    steps:
+    - intent: request_staff_email
+    - action: action_staff_email
