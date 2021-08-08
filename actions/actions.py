@@ -129,12 +129,15 @@ class ActionCourseInfo(Action):
         print("course info")
         print(f"id {course_id}, name {course_name}")
 
-        with open('./knowledge_base_data/course_info.json') as json_file:
+        with open('./knowledge_base_data/course_info.json', encoding='utf8') as json_file:
             data = json.load(json_file)
 
             try:
                 for (key, course_info) in data.items():
-                    if course_id.lower() in str(key).lower() and course_name.lower() in str(key).lower():
+                    csId = key.split('/')[0]
+                    csName = key.split('/')[1]
+
+                    if course_id.lower() in csId.lower() and course_name.lower() in csName.lower():
                         dispatcher.utter_message(text=course_info)
             except:
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
@@ -163,9 +166,8 @@ class ActionStaffEmail(Action):
             data = json.load(json_file)
 
             try:
-                dispatcher.utter_message(text=data[staff])
+                dispatcher.utter_message(text=f"The email you're looking for is {data[staff]}")
             except:
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
         return []
-

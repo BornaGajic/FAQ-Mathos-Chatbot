@@ -57,7 +57,7 @@ nlu:
     - am I talking to a human?
 
 - intent: chitchat/random
-  examples:
+  examples: |
     - Cool
     - Nice
     - Wohoo
@@ -82,6 +82,10 @@ nlu:
     - Mhmmm
     - Oof
 
+- intent: chitchat/hru
+  examples: |
+    - How are you?
+    - How's your day so far?
   
 - intent: faq/ask_study_programmes
   examples: |
@@ -126,6 +130,7 @@ nlu:
     - Location of the department
     - Where is this college
     - Where do I have my lectures?
+    - Hey, what's the college location again?
   
 - intent: faq/ask_student_admin_office
   examples: |
@@ -137,6 +142,20 @@ nlu:
     - information on student administration office
     - tell me working hours of the student administration office
     - hey, is student administration working?
+
+- intent: faq/request_erasmus_info
+  examples: |
+    - Hey, give me information about Erasmus+
+    - Please give me information regarding Erasmus programme
+    - Could you give me information regarding student exchanges
+    - Student exchanges
+    - Erasmus+
+    - Exchange student information
+    - Study programme list for exchange students
+    - Please give me list of available courses for Erasmus+ exchange student
+    - Study abroad
+    - study abroad with traineeship
+    - Erasmus information 
 
 - intent: tell_more_about_programme
   examples: |
@@ -209,6 +228,14 @@ nlu:
     - [Functional Programming]{"entity": "course_name"} information
     - [Semantics of programming languages]{"entity": "course_name"} information
     - [Multivariable Calculus]{"entity": "course_name"} information
+    - hey! can you pleeease give me information on [Ordinary Differential Equations]{"entity": "course_name"}, tyy
+    - How many ects points does [Full Stack Web Development]{"entity": "course_name"} have?
+    - How many ECTS points do I get after [Credit Risk Management]{"entity": "course_name"} course?
+    - Number of ECTS points for [Macroeconomics I]{"entity": "course_name"}
+    - Give me the number of ects points for a course with an id of [M119]{"entity": "course_id"}
+    - Give me the number of ects for [Z011]{"entity": "course_id"}
+    - In which semester is [Number Theory]{"entity": "course_name"}
+    - In what semester is [Nonlinear optimization]{"entity": "course_name"} offered?
 
 - intent: request_staff_email
   examples: |
@@ -277,11 +304,11 @@ nlu:
     - Elementary Mathematics
     - Combinatorial and Discrete Mathematics
     - Linear Algebra I
-    - English/German for Mathematics and Computer Science Students I
+    - Foreign language in profession I
     - English class
     - German class
     - Foreign language class
-    - English/German for Mathematics and Computer Science Students II
+    - Foreign language in profession II
     - Physical Education I
     - Multivariable Calculus
     - Complex Analysis
@@ -452,7 +479,7 @@ nlu:
     - M008 
     - E012 
     - E013 
-    - M122 
+    - M032 
     - M003 
     - M123 
     - E001 

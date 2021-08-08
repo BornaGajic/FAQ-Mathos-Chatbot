@@ -1,0 +1,20 @@
+{
+    "basic_info":
+    {
+        "info": "Erasmus+ (1) is a European funding programme established in 1987 offering university students a possibility of studying or doing an internship abroad in another country for a period of at least 2 months and maximum 12 months per cycle of studies.\n\nStudying abroad is a central part of Erasmus+ and has been shown to have a positive effect on later job prospects. It is also an opportunity to improve language skills, gain self-confidence and independence and immerse yourself in a new culture. Erasmus+ also offers the chance to combine studying abroad with a traineeship. More information about the programme can be found in the Programme Guide (2).\n\nUniversities that participate in this programme have a number of partner providers across Europe that offer student exchange placements. Eligible countries are divided into two groups, Programme countries and Partners countries. Although Programme countries are eligible for all actions of Erasmus+, Partner countries can only take part in some, and are subject to specific conditions. The prerequisite for this is that there has to be an Interinstitutional Agreement (IIA) with the partner university assigned to the relevant field of study and the student must be nominated for an Erasmus+ stay at Josip Juraj Strossmayer University of Osijek (UNIOS) by the partner university. The list of UNIOS Erasmus+ Interinstitutional Agreements is available (3).",
+        "links": {
+            "(1)": "https://ec.europa.eu/programmes/erasmus-plus/about_en",
+            "(2)": "https://ec.europa.eu/programmes/erasmus-plus/resources/programme-guide_en",
+            "(3)": "http://www.unios.hr/wp-content/uploads/2020/09/Popis-me%C4%91uinstitucijskih-ugovora-rujan-2020.pdf"
+        }
+    },
+    "incoming_info":
+    {
+        "info": "The Department of Mathematics strongly supports student exchange and welcomes foreign students. One can find our study programme on this website (2). Moreover, the list of available courses with all necessary details offered in English for Erasmus+ individual incoming students can be found on (1). It is important to say that Erasmus exchange students do not have to pay fees for their overseas studies, and there are some grants available to help with living costs, as well as funding support for students with physical, mental, or health-related conditions. You will need to apply for this programme through your home university Erasmus or international office. Once your home university has nominated you to participate in Erasmus+ mobility at UNIOS, you should contact the UNIOS International Relations Office to get all information concerning the aplication form (see this website (3)). We encourage you to consider the possibility of studying at the Department of Mathematics, University of Osijek.",
+        "links": {
+            "(1)": "https://www.mathos.unios.hr/index.php/en/study-programmes/admission",
+            "(2)": "https://www.mathos.unios.hr/index.php/733",
+            "(3)": "http://www.unios.hr/suradnja/medunarodna-suradnja/erasmus-incoming-students/"
+        }
+    }
+}

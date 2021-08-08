@@ -11,8 +11,8 @@
                 "M100": "Elementary Mathematics",
                 "M102": "Combinatorial and Discrete Mathematics",
                 "M086": "Linear Algebra I",
-                "Z011": "English/German for Mathematics and Computer Science Students I",
-                "Z012": "English/German for Mathematics and Computer Science Students II",
+                "Z011": "Foreign language in profession I",
+                "Z012": "Foreign language in profession II",
                 "Z014": "Physical Education I"
             },  
             "year#2": {
@@ -43,8 +43,8 @@
                 "I048": "Object Oriented Programming",
                 "M086": "Linear Algebra I",
                 "I056": "Introduction to Computer Science", 
-                "Z011": "English/German for Mathematics and Computer Science Students I",
-                "Z012": "English/German for Mathematics and Computer Science Students II",
+                "Z011": "Foreign language in profession I",
+                "Z012": "Foreign language in profession II",
                 "Z014": "Physical Education I"
             },  
             "year#2": {
