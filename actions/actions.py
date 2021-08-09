@@ -38,22 +38,36 @@ class ActionMoreInfoProgramme(Action):
         print(f"program {programme}, degree {degree}")
 
         with open('./knowledge_base_data/study_programme_info.json') as json_file:
-            data = json.load(json_file)
+            with open('./knowledge_base_data/admission_info.json') as admission_file:
+                data = json.load(json_file)
+                admission_info = json.load(admission_file)
 
-            try:
-                if not programme:
-                    dispatcher.utter_message(text="Please specify programme.")
-                elif programme and not degree:
+                try:
+                    if not programme:
+                        dispatcher.utter_message(text="Please specify programme.")
+                    elif programme and not degree:
 
-                    for (_degree, _programmes) in data.items():
-                        if programme in _programmes:
-                            for (key, info) in data[_degree][programme].items():        
+                        for (_degree, _programmes) in data.items():
+                            if programme in _programmes:
+                                for (key, info) in data[_degree][programme].items():        
+                                    dispatcher.utter_message(text=f"{info}\n\n")
+                                for (key, info) in admission_info[_degree][programme].items():        
+                                    if type(info) is dict:
+                                        for (k, i) in info.items():
+                                            dispatcher.utter_message(text=f"{i}\n\n")    
+                                    else:
+                                        dispatcher.utter_message(text=f"{info}\n\n")
+                    else:
+                        for (key, info) in data[degree][programme].items():        
+                            dispatcher.utter_message(text=f"{info}\n\n")
+                        for (key, info) in admission_info[degree][programme].items():   
+                            if type(info) is dict:
+                                for (k, i) in info.items():
+                                    dispatcher.utter_message(text=f"{i}\n\n")    
+                            else:
                                 dispatcher.utter_message(text=f"{info}\n\n")
-                else:
-                    for (key, info) in data[degree][programme].items():        
-                        dispatcher.utter_message(text=f"{info}\n\n")
-            except:
-                dispatcher.utter_message(text="Sorry, I don't understand your request.")
+                except:
+                    dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
         return []
 
