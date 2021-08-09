@@ -5,6 +5,7 @@ stories:
     steps:
     - intent: tell_more_about_programme
     - action: action_more_info_programme
+    - action: utter_did_that_help
 
   - story: Print course list for some study programme
     steps:
@@ -14,7 +15,8 @@ stories:
   - story: More info on some course
     steps:
     - intent: request_course_information
-    - action: action_course_info 
+    - action: action_course_info
+    - action: utter_did_that_help
 
   - story: Request staff email
     steps:
