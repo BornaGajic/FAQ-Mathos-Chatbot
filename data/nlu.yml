@@ -157,6 +157,26 @@ nlu:
     - study abroad with traineeship
     - Erasmus information 
 
+- intent: faq/request_ects_points_info
+  examples: |
+    - How many ECTS points do I need to enroll in the next year?
+    - What's the minimum criteria to enroll in the next year?
+    - Can I enroll in the next year with 32 ECTS points?
+    - Can I go to the next year with 48 ECTS points?
+    - What's the minimum amount of ECTS points I should acquire if I want to enroll in the next year?
+    - How many ects points I need to enroll in the second year of my study?
+
+- intent: faq/requect_price_per_ects
+  examples: |
+    - What's the cost of 1 ects point?
+    - Tell me the cost of one ects point
+    - Give me the cost of 1 ects point
+    - How much do I need to pay for next year?
+    - Cost of study
+    - Cost of ects points
+    - Please give me the cost of next years study program
+    - Price of ECTS points
+
 - intent: tell_more_about_programme
   examples: |
     - Tell me more about [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics]{"entity": "programme", "value": "mathematics"} program
@@ -181,7 +201,7 @@ nlu:
     - Say more about [Bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics & computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program
     - Info on [bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics]{"entity": "programme", "value": "mathematics"}
     - What can you tell me about [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program?
-    - Tell me more about admission info on [mathematics]{"entity": "degree", "value": "undergraduate"} study program
+    - Tell me more about admission info on [mathematics]{"entity": "programme", "value": "mathematics"} study program
 
 - intent: request_courses
   examples: |

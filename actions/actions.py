@@ -54,18 +54,24 @@ class ActionMoreInfoProgramme(Action):
                                 for (key, info) in admission_info[_degree][programme].items():        
                                     if type(info) is dict:
                                         for (k, i) in info.items():
-                                            dispatcher.utter_message(text=f"{i}\n\n")    
+                                            dispatcher.utter_message(text=f"{i}\n")    
+                                            dispatcher.utter_message(text="\n")
                                     else:
-                                        dispatcher.utter_message(text=f"{info}\n\n")
+                                        dispatcher.utter_message(text=f"{info}\n")
+                                        dispatcher.utter_message(text="\n")
                     else:
                         for (key, info) in data[degree][programme].items():        
-                            dispatcher.utter_message(text=f"{info}\n\n")
+                            dispatcher.utter_message(text=f"{info}\n")
+                            dispatcher.utter_message(text="\n")
+
                         for (key, info) in admission_info[degree][programme].items():   
                             if type(info) is dict:
                                 for (k, i) in info.items():
-                                    dispatcher.utter_message(text=f"{i}\n\n")    
+                                    dispatcher.utter_message(text=f"{i}\n")    
+                                    dispatcher.utter_message(text="\n")
                             else:
-                                dispatcher.utter_message(text=f"{info}\n\n")
+                                dispatcher.utter_message(text=f"{info}\n")
+                                dispatcher.utter_message(text="\n")
                 except:
                     dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
