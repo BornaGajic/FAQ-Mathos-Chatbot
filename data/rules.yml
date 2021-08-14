@@ -16,6 +16,11 @@ rules:
   - intent: bot_challenge
   - action: utter_iamabot
 
+- rule: Say 'You're welcome' every time user thanks
+  steps:
+  - intent: thanks
+  - action: utter_welcome
+
 - rule: Response with a FAQ utterance whenever user indulges in some FAQ
   steps:
   - intent: faq

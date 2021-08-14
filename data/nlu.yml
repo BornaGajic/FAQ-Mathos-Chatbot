@@ -49,6 +49,15 @@ nlu:
     - don't like that
     - no way
 
+- intent: thanks
+  examples: |
+    - thank you
+    - thank's
+    - thanks
+    - thanks man
+    - wow thank you
+    - tnx
+
 - intent: bot_challenge
   examples: |
     - are you a bot?
@@ -58,6 +67,7 @@ nlu:
 
 - intent: chitchat/random
   examples: |
+    - Cheers
     - Cool
     - Nice
     - Wohoo
@@ -98,6 +108,7 @@ nlu:
     - Programs
     - Programmes
     - do you know what study programs our college has?
+    - so.. what study program do you have?
 
 - intent: faq/ask_undergrad_programmes
   examples: |
@@ -203,6 +214,15 @@ nlu:
     - What can you tell me about [master level]{"entity": "degree", "value": "graduate"} [financial mathematics and statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program?
     - Tell me more about admission info on [mathematics]{"entity": "programme", "value": "mathematics"} study program
 
+- intent: request_admission_info
+  examples: |
+    - Give me admission information about [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics]{"entity": "programme", "value": "mathematics"} program
+    - Admission info on [graduate]{"entity": "degree", "value": "graduate"} [Mathematics and Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} program
+    - [Mathematics]{"entity": "programme", "value": "mathematics"} study program admission info
+    - Tell me more about admission to the [Financial Mathematics and Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program
+    - How do I enroll in a [mathematics]{"entity": "programme", "value": "mathematics"} study program
+    - Tell me about admission info on [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics and Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} program
+
 - intent: request_courses
   examples: |
     - Give me courses of the [bachelor level]{"entity": "degree", "value": "undergraduate"} [mathematics & computer science]{"entity": "programme", "value": "mathematics&computer_science"} study program
@@ -219,6 +239,7 @@ nlu:
     - list [financial mathematics and statistics]{"entity": "programme"} courses
     - hey, list me [mathematics]{"entity": "programme"} courses
     - give me a list of courses from the [financial mathematics and statistics]{"entity": "programme"} program
+    - what courses do I have on [mathematics]{"entity": "programme"} study program
 
 - intent: request_course_information
   examples: |

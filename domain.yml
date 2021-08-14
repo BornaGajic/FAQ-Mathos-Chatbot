@@ -5,6 +5,7 @@ intents:
   - goodbye
   - affirm
   - deny
+  - thanks
   - bot_challenge
   - faq
   - chitchat
@@ -12,6 +13,7 @@ intents:
   - request_courses
   - request_course_information
   - request_staff_email
+  - request_admission_info
 
 entities:
   - degree
@@ -25,6 +27,7 @@ actions:
   - action_course_list
   - action_course_info
   - action_staff_email
+  - action_admission_info
 
 responses:
   utter_did_that_help:
@@ -35,6 +38,11 @@ responses:
   - text: "Hello!"
   - text: "Yo!"
   - text: "Hi!"
+
+  utter_welcome:
+  - text: "You're welcome!"
+  - text: "Any time!"
+  - text: "Cheers!"
 
   utter_goodbye:
   - text: "Bye!"

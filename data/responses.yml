@@ -8,9 +8,7 @@ responses:
     - text: 😅
     - text: 🙂
     - text: 😎
-    - text: 🤖
-    - text: 🚀 
-    - text: 👾
+    - text: 🚀
     - text: 💯
   
   utter_chitchat/hru:

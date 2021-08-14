@@ -37,41 +37,85 @@ class ActionMoreInfoProgramme(Action):
         print("more info action")
         print(f"program {programme}, degree {degree}")
 
-        with open('./knowledge_base_data/study_programme_info.json') as json_file:
-            with open('./knowledge_base_data/admission_info.json') as admission_file:
-                data = json.load(json_file)
+        with open('./knowledge_base_data/study_programme_info.json', encoding="utf8") as json_file:
+            data = json.load(json_file)
+            message = ""
+
+            try:
+                if not programme:
+                    dispatcher.utter_message(text="Please specify programme.")
+                    return []
+                elif programme and not degree:
+
+                    for (_degree, _programmes) in data.items():
+                        if programme in _programmes:
+                            for (key, info) in data[_degree][programme].items():        
+                                message += "\n \n " + info
+                else:
+                    for (key, info) in data[degree][programme].items():        
+                        message +=  info + " \n"
+                
+                print(message)
+                dispatcher.utter_message(text=str(message))
+            except:
+                dispatcher.utter_message(text="Sorry, I don't understand your request.")
+
+        return []
+
+class ActionAdmissionInfo(Action):
+
+    def name(self) -> Text:
+        return "action_admission_info"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+
+        programme = ""
+        degree = ""
+
+        for e in tracker.latest_message['entities']:
+            if e['entity'] == 'programme':
+                programme = e['value']
+            elif e['entity'] == 'degree':
+                degree = e['value']
+
+        print("more admission action")
+        print(f"program {programme}, degree {degree}")
+
+        with open('./knowledge_base_data/admission_info.json', encoding="utf8") as admission_file:
                 admission_info = json.load(admission_file)
+                message = ""
 
                 try:
                     if not programme:
                         dispatcher.utter_message(text="Please specify programme.")
+                        return []
                     elif programme and not degree:
 
-                        for (_degree, _programmes) in data.items():
+                        for (_degree, _programmes) in admission_info.items():
+                            
                             if programme in _programmes:
-                                for (key, info) in data[_degree][programme].items():        
-                                    dispatcher.utter_message(text=f"{info}\n\n")
-                                for (key, info) in admission_info[_degree][programme].items():        
+
+                                for (key, info) in admission_info[_degree][programme].items():
+                                    
                                     if type(info) is dict:
                                         for (k, i) in info.items():
-                                            dispatcher.utter_message(text=f"{i}\n")    
-                                            dispatcher.utter_message(text="\n")
+                                            message += i + " \u000A \u000A"
                                     else:
-                                        dispatcher.utter_message(text=f"{info}\n")
-                                        dispatcher.utter_message(text="\n")
-                    else:
-                        for (key, info) in data[degree][programme].items():        
-                            dispatcher.utter_message(text=f"{info}\n")
-                            dispatcher.utter_message(text="\n")
+                                        message += info + " \u000A \u000A"
 
+                                break
+                    else:
                         for (key, info) in admission_info[degree][programme].items():   
                             if type(info) is dict:
                                 for (k, i) in info.items():
-                                    dispatcher.utter_message(text=f"{i}\n")    
-                                    dispatcher.utter_message(text="\n")
+                                    message += i
                             else:
-                                dispatcher.utter_message(text=f"{info}\n")
-                                dispatcher.utter_message(text="\n")
+                                message += info
+                    
+                    print(message)
+                    dispatcher.utter_message(text=str(message))
                 except:
                     dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
@@ -97,32 +141,37 @@ class ActionCourseList(Action):
         print("course action")
         print(f"program {programme}, degree {degree}")
 
-        with open('./knowledge_base_data/course_list.json') as json_file:
+        with open('./knowledge_base_data/course_list.json', encoding="utf8") as json_file:
             data = json.load(json_file)
-
+            message = ""
             try:
                 if not programme:
                     dispatcher.utter_message(text="Please specify a programme that you are interested in.")
+                    return []
                 elif not degree:
                     for (degrees, content) in data.items():
                         
                         if programme in content:
                             for (year, courses) in content[programme].items():
                                 k = year.replace('#', ' ')
-                                dispatcher.utter_message(text=f"{k}\n")
+                                message += k + "\n"
                                                                 
                                 for (id, name) in courses.items():
-                                    dispatcher.utter_message(text=f"{id}, {name}\n")
+                                    message += id + ", " + name + "\n"
 
-                                dispatcher.utter_message(text="\n")
+                                message += " \n"
                             break
                 else:
                     for (key, courses) in data[degree][programme].items():
                         k = key.replace('#', ' ')
-                        dispatcher.utter_message(text=f"{k}\n")
-
+                        message += k + "\n"
+                        
                         for (id, name) in courses.items():
-                            dispatcher.utter_message(text=f"{id}, {name}\n")
+                            message += id + ", " + name + " \n"
+
+                        message += " \n"
+
+                dispatcher.utter_message(text=str(message))
             except:
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
@@ -151,14 +200,15 @@ class ActionCourseInfo(Action):
 
         with open('./knowledge_base_data/course_info.json', encoding='utf8') as json_file:
             data = json.load(json_file)
-
+            message = ""
             try:
                 for (key, course_info) in data.items():
                     csId = key.split('/')[0]
                     csName = key.split('/')[1]
 
                     if course_id.lower() in csId.lower() and course_name.lower() in csName.lower():
-                        dispatcher.utter_message(text=course_info)
+                        dispatcher.utter_message(text=str(course_info))
+                        break
             except:
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
@@ -182,7 +232,7 @@ class ActionStaffEmail(Action):
         print("course info")
         print(f"staff {staff}")
 
-        with open('./knowledge_base_data/staff_email.json') as json_file:
+        with open('./knowledge_base_data/staff_email.json', encoding="utf8") as json_file:
             data = json.load(json_file)
 
             try:
