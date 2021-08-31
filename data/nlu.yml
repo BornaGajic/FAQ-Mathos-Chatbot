@@ -16,6 +16,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
+    - yo
 
 - intent: goodbye
   examples: |
@@ -109,6 +110,8 @@ nlu:
     - Programmes
     - do you know what study programs our college has?
     - so.. what study program do you have?
+    - studies
+    - give me studies
 
 - intent: faq/ask_undergrad_programmes
   examples: |

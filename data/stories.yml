@@ -4,7 +4,7 @@ stories:
   - story: On start
     steps:
     - intent: start
-    - action: utter_greet
+    - action: utter_what_can_you_do
   
   - story: On help
     steps:
