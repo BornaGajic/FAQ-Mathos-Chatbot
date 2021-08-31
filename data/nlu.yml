@@ -222,6 +222,7 @@ nlu:
     - Tell me more about admission to the [Financial Mathematics and Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} study program
     - How do I enroll in a [mathematics]{"entity": "programme", "value": "mathematics"} study program
     - Tell me about admission info on [undergraduate]{"entity": "degree", "value": "undergraduate"} [Mathematics and Computer Science]{"entity": "programme", "value": "mathematics&computer_science"} program
+    - Tell me more about admission information on [Financial Mathematics and Statistics]{"entity": "programme", "value": "financial_mathematics&statistics"} program
 
 - intent: request_courses
   examples: |

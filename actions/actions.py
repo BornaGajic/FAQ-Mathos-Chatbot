@@ -39,7 +39,6 @@ class ActionMoreInfoProgramme(Action):
 
         with open('./knowledge_base_data/study_programme_info.json', encoding="utf8") as json_file:
             data = json.load(json_file)
-            message = ""
 
             try:
                 if not programme:
@@ -49,14 +48,11 @@ class ActionMoreInfoProgramme(Action):
 
                     for (_degree, _programmes) in data.items():
                         if programme in _programmes:
-                            for (key, info) in data[_degree][programme].items():        
-                                message += "\n \n " + info
+                            for (key, info) in data[_degree][programme].items():
+                                dispatcher.utter_message(text=info)
                 else:
                     for (key, info) in data[degree][programme].items():        
-                        message +=  info + " \n"
-                
-                print(message)
-                dispatcher.utter_message(text=str(message))
+                        dispatcher.utter_message(text=info)
             except:
                 dispatcher.utter_message(text="Sorry, I don't understand your request.")
 
@@ -101,21 +97,18 @@ class ActionAdmissionInfo(Action):
                                     
                                     if type(info) is dict:
                                         for (k, i) in info.items():
-                                            message += i + " \u000A \u000A"
+                                            dispatcher.utter_message(text=i)
                                     else:
-                                        message += info + " \u000A \u000A"
+                                        dispatcher.utter_message(text=info)
 
                                 break
                     else:
                         for (key, info) in admission_info[degree][programme].items():   
                             if type(info) is dict:
                                 for (k, i) in info.items():
-                                    message += i
+                                    dispatcher.utter_message(text=i)
                             else:
-                                message += info
-                    
-                    print(message)
-                    dispatcher.utter_message(text=str(message))
+                                dispatcher.utter_message(text=info)
                 except:
                     dispatcher.utter_message(text="Sorry, I don't understand your request.")
 

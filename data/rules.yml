@@ -21,6 +21,11 @@ rules:
   - intent: thanks
   - action: utter_welcome
 
+- rule: Say what you can do
+  steps: 
+    - intent: what_can_you_do
+    - action: utter_what_can_you_do
+
 - rule: Response with a FAQ utterance whenever user indulges in some FAQ
   steps:
   - intent: faq

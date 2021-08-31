@@ -1,12 +1,15 @@
 version: "2.0"
 
 intents:
+  - start
+  - help
   - greet
   - goodbye
   - affirm
   - deny
   - thanks
   - bot_challenge
+  - what_can_you_do
   - faq
   - chitchat
   - tell_more_about_programme
@@ -38,6 +41,10 @@ responses:
   - text: "Hello!"
   - text: "Yo!"
   - text: "Hi!"
+
+  utter_what_can_you_do:
+  - text: "You can ask anything about our department and I'll try to answer you as best as I can. For example, I can tell you the email adress of a deparments staff member, or tell you more about Erasmus+ project and even tell you the working hours of our Student Administration Office!"
+  - text: "You can ask anything about our department and I'll try to answer you as best as I can. For example, I can give you admission information on some study programme, tell you what kind of courses you'll have on some year, and if you're lazy finding the email adress of some staff member of our Department just ask me - I'll know for sure!"
 
   utter_welcome:
   - text: "You're welcome!"
