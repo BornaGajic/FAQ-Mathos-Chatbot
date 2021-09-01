@@ -6,3 +6,6 @@ models/
 
 # visualization
 *.html
+
+# credentials
+credentials.yml
