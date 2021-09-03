@@ -1,12 +1,3 @@
-# This files contains your custom actions which can be used to run
-# custom Python code.
-#
-# See this guide on how to implement these action:
-# https://rasa.com/docs/rasa/custom-actions
-
-
-# This is a simple example for a custom action which utters "Hello World!"
-
 from logging import info
 from typing import Any, Text, Dict, List
 
@@ -131,6 +122,7 @@ class ActionCourseList(Action):
                 programme = e['value']
             elif e['entity'] == 'degree':
                 degree = e['value']
+
         print("course action")
         print(f"program {programme}, degree {degree}")
 
@@ -222,7 +214,6 @@ class ActionStaffEmail(Action):
             if e['entity'] == 'staff':
                 staff = e['value']
         
-        print("course info")
         print(f"staff {staff}")
 
         with open('./knowledge_base_data/staff_email.json', encoding="utf8") as json_file:
